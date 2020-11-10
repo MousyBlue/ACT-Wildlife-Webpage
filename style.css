@@ -1,0 +1,50 @@
+/* Grid layout developed with https://grid.layoutit.com/ */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 300px 400px 400px 100px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nav nav"
+    "banner banner"
+    "box1 box2"
+    "box3 box4"
+    "footer footer";
+}
+
+/* Formatting for the navigation bar */
+nav { grid-area: nav; }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.banner { 
+  grid-area: banner; 
+  background-color: green;
+}
+.box1 { grid-area: box1; }
+.box2 { grid-area: box2; }
+.box3 { grid-area: box3; }
+.box4 { grid-area: box4; }
+footer { grid-area: footer; }
