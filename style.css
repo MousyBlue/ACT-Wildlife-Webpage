@@ -12,8 +12,12 @@
     "footer footer";
 }
 
+
 /* Formatting for the navigation bar */
-nav { grid-area: nav; }
+nav { 
+  grid-area: nav; 
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -41,10 +45,43 @@ li a:hover {
 
 .banner { 
   grid-area: banner; 
-  background-color: green;
+  background-color: rgb(141,202,117);
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
 }
-.box1 { grid-area: box1; }
-.box2 { grid-area: box2; }
-.box3 { grid-area: box3; }
-.box4 { grid-area: box4; }
-footer { grid-area: footer; }
+.banner h2 {
+  color: white
+}
+.banner h3 {
+  color: rgb(88, 88, 88);
+}
+.banner h4 {
+  color: rgb(91, 6, 25);
+}
+.banner p {
+  color: rgb(100, 100, 100);
+}
+
+.box1 { 
+  grid-area: box1; 
+  background-color: rgb(235,235,235);
+  margin: 20px 10px 10px 50px;
+  }
+.box2 { 
+  grid-area: box2; 
+  background-color: rgb(235,235,235);
+  margin: 20px 50px 10px 10px;
+}
+.box3 { 
+  grid-area: box3; 
+  background-color: rgb(235,235,235);
+  margin: 10px 10px 20px 50px;
+}
+.box4 { 
+  grid-area: box4;
+  margin: 10px 50px 20px 10px; 
+}
+footer { 
+  grid-area: footer; 
+  background-color: rgb(141, 202, 117);
+}
