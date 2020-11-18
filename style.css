@@ -1,5 +1,5 @@
 /* Grid layout developed with https://grid.layoutit.com/ */
-.grid-container {
+.index_Grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px 300px 400px 400px 100px;
@@ -85,3 +85,16 @@ footer {
   grid-area: footer; 
   background-color: rgb(141, 202, 117);
 }
+
+.footer_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px 0px;
+  grid-template-areas:
+    "footer1 footer2 footer3"
+}
+
+.footer1 { grid-area: footer1; }
+.footer2 { grid-area: footer2; }
+.footer3 { grid-area: footer3; }
