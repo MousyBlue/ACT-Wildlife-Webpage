@@ -12,7 +12,6 @@
     "footer footer";
 }
 
-
 /* Formatting for the navigation bar */
 nav { 
   grid-area: nav; 
@@ -66,7 +65,13 @@ li a:hover {
   grid-area: box1; 
   background-color: rgb(235,235,235);
   margin: 20px 10px 10px 50px;
+  text-align: center;
   }
+.box1 img {
+  max-width: 90%;
+  height: auto;
+}
+
 .box2 { 
   grid-area: box2; 
   background-color: rgb(235,235,235);
@@ -84,6 +89,7 @@ li a:hover {
 footer { 
   grid-area: footer; 
   background-color: rgb(141, 202, 117);
+  text-align: center
 }
 
 .footer_Grid {
@@ -95,6 +101,17 @@ footer {
     "footer1 footer2 footer3"
 }
 
+footer button {
+  background-color: rgb(91, 6, 25); /* Green */
+  border: none;
+  color: white;
+  padding: 5px 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  display: block;
+  font-size: 16px;
+}
 .footer1 { grid-area: footer1; }
 .footer2 { grid-area: footer2; }
 .footer3 { grid-area: footer3; }
