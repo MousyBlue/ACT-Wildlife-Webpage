@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/284110806b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="nav">
@@ -13,7 +14,7 @@
           <img src="echidna.jpg" alt="Echidna Logo" style="width:40px;height:40px;">
           </a></li>
         <li style="float:left"><a href="index.html">ACT WILDLIFE</a></li>
-        <li style="background-color:rgb(91,6,25);"><a href="">SUPPORT US</a></li>
+       <li style="background-color:rgb(91,6,25);"><a style="color:white" href="">SUPPORT US</a></li>
         <li><a href="">KIDS</a></li>
         <li><a href="">GALLERY</a></li>
         <li><a href="">CONTACT</a></li>
@@ -24,5 +25,79 @@
         <li><a href="index.html">HOME</a></li>
       </ul>
     </nav>
+    <div class="banner">
+      <img src="getinvolvedbanner.jpg" alt="Volunteer with a wombat" style="width:auto">
+    </div>
+    <div>
+      <h2>Volunteering with ACT Wildlife</h2>
+      <p>Thank you for your interest in volunteering with ACT Wildlife. Volunteers are the heart of our charity and we are always looking for more caring individuals to help support the beautiful native wildlife of the ACT.<br>
+      To sign up as a volunteer, simply fill out this form with your contact details and interests and one of our outreach members will be in touch shortly!</p>
+
+      <div class="form">
+        <form>
+          <h3 style="text-align:center;"> Volunteer Sign Up Form</h3>
+          <h4>Name</h4>
+            <input type="text" id="name" name="name">
+          <h4>Preferred Contact</h4>
+            <input type="radio" id="email" name="contact">
+            <label for="email">Email</label>
+            <input type="radio" id="phone" name="contact">
+            <label for="phone">Phone</label>
+          <h4>Areas of Interest</h4>
+            <input type="checkbox" id="interest1" name="interest1">
+            <label for="interest1">Fundraising</label>
+            <input type="checkbox" id="interest2" name="interest2">
+            <label for="interest2">Animal Rescue</label><br>
+            <input type="checkbox" id="interest3" name="interest3">
+            <label for="interest3">Animal Handling</label>
+            <input type="checkbox" id="interest4" name="interest4">
+            <label for="interest4">Fostering</label><br>
+            <input type="checkbox" id="interest5" name="interest5">
+            <label for="interest5">Animal Transport</label>
+            <input type="checkbox" id="interest6" name="interest6">
+            <label for="interest6">Education</label><br>
+            <input type="checkbox" id="interest7" name="interest7">
+            <label for="interest7">Land Care</label>
+            <input type="checkbox" id="other" name="other">
+            <label for="other">Other</label><br>
+          <h4>Your experience</h4>
+            <p>Do you have any experience working with ACT Wildlife or other similar organisations in the past? This will help us match you to a task best suited to your skills.</p>
+            <input type="text" id="exp" name="exp">
+
+          <p>Thank you for your support of ACT Wildlife<br>
+          Click the "SIGN UP" button to submit your form.</p>
+            <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
   </body>
+  <footer>
+    <div class="footer_Grid">
+      <div class="footer1">
+        <p><em>Our Sponsor</em></p>
+        <a href="https://www.apisgroup.com.au/" target="_blank">
+          <img src="apislogo.jpg" alt="Logo of APIS" style="width:auto;height:40px;">
+        </a>
+      </div>
+      <div class="footer2">
+        <p><em>Thank you for supporting ACT Wildlife</em></p>
+        <button onclick="document.location='supportUs.html'">DONATE</button>
+      </div>
+      <div class="footer3">
+        <p><em>Find Us on Social Media</em></p>
+        <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com/act_wildlife/?hl=en" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCY80YUm8xzoPLRu_Q1WCJ9Q" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://twitter.com/ACT_Wildlife" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </html>

@@ -22,7 +22,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
 }
 
 li {
@@ -31,17 +31,26 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+ul li:first-of-type a {
+  padding: 0px;
 }
 
+/* Change the link color to light grey on hover */
+li a:hover {
+  background-color: #EEE;
+}
+/* Except for the support us button */
+ul li:nth-of-type(3) a:hover {
+  background-color: maroon;
+}
+
+/* Formatting for the banner */
 .banner { 
   grid-area: banner; 
   background-color: rgb(141,202,117);
@@ -60,12 +69,17 @@ li a:hover {
 .banner p {
   color: rgb(100, 100, 100);
 }
+.banner span {
+  display: inline;
+}
 
+/* Formatting for the index text boxes */
 .box1 { 
   grid-area: box1; 
   background-color: rgb(235,235,235);
-  margin: 20px 10px 10px 50px;
+  margin: 20px 10px 10px auto;
   text-align: center;
+  max-width: 600px;
   }
 .box1 img {
   max-width: 90%;
@@ -75,17 +89,34 @@ li a:hover {
 .box2 { 
   grid-area: box2; 
   background-color: rgb(235,235,235);
-  margin: 20px 50px 10px 10px;
+  margin: 20px auto 10px 10px;
+  width: 600px;
 }
 .box3 { 
   grid-area: box3; 
   background-color: rgb(235,235,235);
-  margin: 10px 10px 20px 50px;
+  margin: 10px 10px 20px auto;
+  width: 600px
 }
 .box4 { 
   grid-area: box4;
-  margin: 10px 50px 20px 10px; 
+  margin: 10px auto 20px 10px; 
+  width: 600px;
 }
+
+
+
+/* Formatting for the "get involved" page */
+.form {
+  background-color: lightgray;
+  width: 1000px;
+  padding: auto;
+}
+
+
+
+
+/* Formatting for the footer */
 footer { 
   grid-area: footer; 
   background-color: rgb(141, 202, 117);
@@ -111,6 +142,10 @@ footer button {
   margin: auto;
   display: block;
   font-size: 16px;
+}
+footer button:hover {
+  background-color: maroon;
+  cursor: pointer;
 }
 .footer1 { grid-area: footer1; }
 .footer2 { grid-area: footer2; }
