@@ -95,6 +95,9 @@ hr {
 .nav ul li:nth-of-type(3) a:hover {
   background-color: maroon;
 }
+.nav ul li:first-of-type a:hover, .nav ul li:nth-of-type(2) a:hover {
+  background-color: white;
+}
 
 .mobileNav {
   grid-area: mobileNav;
@@ -303,7 +306,6 @@ hr {
 }
 
 
-
 /* Formatting for the "get involved" page */
 .getInvolved {
   max-width: 900px;
@@ -331,7 +333,6 @@ hr {
   padding-left: 10px;
   font-size: 10px;
 }
-/* Making elements appear when checked */
 
 
 
@@ -376,6 +377,80 @@ hr {
 .wildlifeHelp button:hover {
   cursor: pointer;
 }
+
+/* Formatting for the About page */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "aboutAside about1"
+    "aboutAside about2";
+}
+.aboutAside { 
+  grid-area: aboutAside;
+  background-color: rgb(235,235,235);
+  margin: 20px 10px 10px auto;
+  text-align: center;
+  width: 440px;
+  padding: 10px;
+}
+.aboutAside figure, .aboutAside figcaption {
+  margin: auto;
+  font-size: 12px;
+}
+.aboutAside img {
+  width: 420px;
+  height: auto;
+  margin: auto;
+}
+.about1 { 
+  grid-area: about1; 
+  background-color: rgb(235,235,235);
+  margin: 20px auto 10px 10px;
+  width: 440px;
+  padding: 0px 15px 5px 15px;
+}
+.about1 h2 {
+  text-align: center;
+}
+.about1 em {
+  text-align: center;
+}
+.about2 { 
+  grid-area: about2; 
+  background-color: rgb(235,235,235);
+  margin: 20px auto 10px 10px;
+  width: 440px;
+  padding: 0px 15px 5px 15px;
+}
+.about2 h2 {
+  text-align: center;
+}
+.about2 em {
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px;
+    grid-template-areas:
+      "about1"
+      "aboutAside"
+      "about2"
+  }
+  .aboutAside, .about1, .about2 {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+
 
 
 /* Formatting for the footer */
