@@ -217,7 +217,7 @@ hr {
 }
 
 
-/* Formatting for the index text boxes */
+/* Formatting for the index page */
 .box1 { 
   grid-area: box1; 
   background-color: rgb(235,235,235);
@@ -295,6 +295,10 @@ hr {
   grid-area: box4;
   margin: 10px auto 20px 10px; 
   width: 440px;
+  background-image: url('echidna.jpg');
+  background-repeat: no-repeat;
+  background-size: 400px;
+  opacity: 0.4;
 }
 
 @media only screen and (max-width: 900px) {
