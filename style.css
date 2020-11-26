@@ -46,7 +46,7 @@ hr {
     grid-template-rows: auto auto auto auto auto;
     gap: 0px;
     grid-template-areas:
-      "nav"
+      "mobileNav"
       "banner"
       "box1"
       "box2"
@@ -55,13 +55,14 @@ hr {
 }
 
 /* Formatting for the navigation bar */
-nav { 
+.nav { 
   grid-area: nav; 
   font-family: 'Open Sans Condensed', sans-serif;
-  margin: 0;
+  margin: 0px;
+  height: auto;
 }
 
-nav ul {
+.nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -69,11 +70,11 @@ nav ul {
   background-color: white;
 }
 
-nav li {
+.nav li {
   float: right;
 }
 
-nav li a {
+.nav li a {
   display: block;
   color: black;
   text-align: center;
@@ -82,19 +83,72 @@ nav li a {
   font-size: 16px;
 }
 
-nav ul li:first-of-type a {
+.nav ul li:first-of-type a {
   padding: 0px;
 }
 
 /* Change the link color to light grey on hover */
-nav li a:hover {
+.nav li a:hover {
   background-color: #EEE;
 }
 /* Except for the support us button */
-nav ul li:nth-of-type(3) a:hover {
+.nav ul li:nth-of-type(3) a:hover {
   background-color: maroon;
 }
 
+.mobileNav {
+  grid-area: mobileNav;
+  margin: 0px;
+}
+.mobileNav div {
+  display: block;
+  margin: auto;
+}
+.mobileNav a {
+  text-decoration: none;
+  background-color: white;
+  font-size: 16px;
+  display: block;
+  color: black;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+}
+.mobileNav img {
+  display: block;
+  margin: auto;
+}
+.mobileNav button {
+  background-color: white;
+  font-size: 16px;
+  display: block;
+  border: 0px;
+  margin: auto;
+}
+/* Change the link color to light grey on hover */
+.mobileNav a:hover {
+  background-color: #EEE;
+}
+.mobileNav button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .moblileNav {
+    display: block;
+  }
+}
+@media not screen and (max-width: 900px) {
+  .nav {
+    display: block;
+  }
+  .mobileNav {
+    display: none;
+  }
+}
 
 /* Formatting for the banner */
 .banner { 
@@ -102,6 +156,9 @@ nav ul li:nth-of-type(3) a:hover {
   background-color: rgb(141,202,117);
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
+  display: block;
+  margin: 0px;
+  height: auto;
 }
 
 .bannerGrid {
@@ -195,7 +252,7 @@ nav ul li:nth-of-type(3) a:hover {
   padding: 0px 5px 5px 5px;
 }
 .box2 tr:nth-of-type(even) {
-  background-color: lightgrey;
+  background-color: #EEE;
 }
 .box2 p {
   padding:0px 10px;
@@ -210,6 +267,10 @@ nav ul li:nth-of-type(3) a:hover {
   display: block;
   font-size: 16px;
   margin: 8px auto 0px auto;
+}
+.box2 button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .box3 { 
@@ -249,7 +310,7 @@ nav ul li:nth-of-type(3) a:hover {
   margin: auto;
 }
 .form {
-  background-color: lightgray;
+  background-color: #EEE;
   max-width: 800px;
   margin: auto;
   padding: 10px 20px;
@@ -290,7 +351,7 @@ nav ul li:nth-of-type(3) a:hover {
   min-height: 220px;
 }
 .wildlifeHelp div:nth-child(3), .wildlifeHelp div:nth-child(4){
-  background-color: lightgray;
+  background-color: #EEE;
 }
 .wildlifeHelp p{
   margin:0px;
@@ -306,6 +367,14 @@ nav ul li:nth-of-type(3) a:hover {
 }
 .wildlifeHelp button {
   float: right;
+  border: none;
+  background-color: white;
+}
+.wildlifeHelp div:nth-child(3) button {
+  background-color: #EEE;
+}
+.wildlifeHelp button:hover {
+  cursor: pointer;
 }
 
 
@@ -342,6 +411,7 @@ footer button:hover {
 footer i, footer a {
   font-size: 26px;
   text-decoration: none;
+  color: maroon;
 }
 footer a img {
   height: 30px;

@@ -6,6 +6,7 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/284110806b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
   <div class="index_Grid">
@@ -25,6 +26,23 @@
         <li><a href="about.html">ABOUT US</a></li>
         <li><a href="index.html">HOME</a></li>
       </ul>
+    </nav>
+    <nav class="mobileNav">
+      <div id = "mobileHeader">
+        <img src="echidna.jpg" alt="Echidna Logo" style="width:100px;height:100px;">
+        <button id="menuButton" onclick="javascript:showMenu();">ACT WILDLIFE</button>
+      </div>
+      <div id = "mobileContent" style="display:none">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="wildlifeHelp.html">WILDLIFE HELP</a>
+        <a href="getInvolved.html">GET INVOLVED</a>
+        <a href="">PUBLICATIONS</a>
+        <a href="">CONTACT</a>
+        <a href="">GALLERY</a>
+        <a href="">KIDS</a>
+        <a href=""style="color:white;background-color:rgb(91,6,25);">SUPPORT US</a>
+      </div>
     </nav>
     <div class="banner">
       <h2>FOR 24hr WILDLIFE ASSISTANCE:</h2>
@@ -56,7 +74,7 @@
         <tr>
           <td><strong>Saturday, November 14</strong></td>
           <td><strong>Orientation Day</strong></td>
-          <td rowspan="2"><button onclick="document.location='empty.html'">JOIN</button></td>
+          <td rowspan="2"><button onclick="">JOIN</button></td>
         </tr>
         <tr>
           <td colspan="2"><em>Come and get to know ACT wildlife and its volunteers!</em></td>
@@ -64,7 +82,7 @@
         <tr>
           <td><strong>Wednesday, November 25</strong></td>
           <td><strong>Phone and Transport</strong></td>
-          <td rowspan="2"><button onclick="document.location='empty.html'">JOIN</button></td>
+          <td rowspan="2"><button onclick="">JOIN</button></td>
         </tr>
         <tr>
           <td colspan="2"><em>Learn about the logistics of operating our phone lines and wildlife transport services</em></td>

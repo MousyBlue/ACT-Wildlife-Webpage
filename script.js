@@ -64,3 +64,12 @@ function showHelp3() {
     document.getElementById("help3Button").innerHTML = "v";
   }
 }
+
+function showMenu() {
+  var section = document.getElementById("mobileContent");
+  if (section.style.display === "none") {
+    section.style.display = "block";
+  } else {
+    section.style.display = "none";
+  }
+}
