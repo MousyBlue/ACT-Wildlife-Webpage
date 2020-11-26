@@ -7,6 +7,7 @@
 }
 h2 {
   font-size: 20px;
+  margin-bottom: 0px;
 }
 h3 {
   font-size: 16px;
@@ -17,19 +18,26 @@ h4 {
 p {
   font-size: 14px;
 }
+hr {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  color: darkgreen;
+  background-color: darkgreen;
+  border-width: 0px;
+  height:3px;
+}
 
 /* Grid layout developed with https://grid.layoutit.com/ */
 .index_Grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 300px auto auto 100px;
+  grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     "nav nav"
     "banner banner"
     "box1 box2"
     "box3 box4"
-    "footer footer";
 }
 
 /* Formatting for the navigation bar */
@@ -79,6 +87,24 @@ nav ul li:nth-of-type(3) a:hover {
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
 }
+.bannerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "phone1 phone2";
+}
+.phone1 { 
+  grid-area: phone1; 
+  max-width: 300px;
+  margin: 20px 80px 10px auto;
+}
+.phone2 { 
+  grid-area: phone2; 
+  max-width: 300px;
+  margin: 20px auto 10px 80px;
+}
 .banner h2 {
   color: white
 }
@@ -102,10 +128,14 @@ nav ul li:nth-of-type(3) a:hover {
   margin: 20px 10px 10px auto;
   text-align: center;
   max-width: 440px;
-  padding: 10px;
-  }
+  padding: 20px;
+}
+.box1 figure, .box1 figcaption {
+  margin: auto;
+  font-size: 12px;
+}
 .box1 img {
-  max-width: 100%;
+  width: 420px;
   height: auto;
 }
 
@@ -118,12 +148,17 @@ nav ul li:nth-of-type(3) a:hover {
 }
 .box2 table {
   margin:10px;
+  border-collapse: collapse;
+}
+.box2 td {
+  border-bottom: 1px solid black; 
+  border-top: 1px solid black;
 }
 .box2 td, .box2 tr {
-  padding: 0px 5px 10px 5px;
+  padding: 0px 5px 5px 5px;
 }
 .box2 tr:nth-of-type(even) {
-  background-color: grey;
+  background-color: lightgrey;
 }
 .box2 p {
   padding:0px 10px;
@@ -137,7 +172,7 @@ nav ul li:nth-of-type(3) a:hover {
   text-decoration: none;
   display: block;
   font-size: 16px;
-  margin: 15px auto 0px auto;
+  margin: 8px auto 0px auto;
 }
 
 .box3 { 
@@ -145,7 +180,15 @@ nav ul li:nth-of-type(3) a:hover {
   background-color: rgb(235,235,235);
   margin: 10px 10px 20px auto;
   width: 440px;
-  padding: 0px 10px 5px 10px;
+  padding: 0px 10px 20px 10px;
+}
+.box3 p {
+  margin: 0px;
+  margin-left: 5px;
+}
+.box3 h3 {
+  margin-bottom: 3px;
+  margin-left: 5px;
 }
 .box4 { 
   grid-area: box4;
@@ -206,12 +249,20 @@ footer button {
   text-align: center;
   text-decoration: none;
   margin: auto;
-  display: block;
+  display: inline-block;
   font-size: 16px;
 }
 footer button:hover {
   background-color: maroon;
   cursor: pointer;
+}
+footer i, footer a {
+  font-size: 26px;
+  text-decoration: none;
+}
+footer a img {
+  height: 30px;
+  width: auto;
 }
 .footer1 { grid-area: footer1; }
 .footer2 { grid-area: footer2; }
