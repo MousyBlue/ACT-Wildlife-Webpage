@@ -39,6 +39,20 @@ hr {
     "box1 box2"
     "box3 box4"
 }
+@media only screen and (max-width: 900px) {
+  .index_Grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px;
+    grid-template-areas:
+      "nav"
+      "banner"
+      "box1"
+      "box2"
+      "box3"
+  }
+}
 
 /* Formatting for the navigation bar */
 nav { 
@@ -46,6 +60,7 @@ nav {
   font-family: 'Open Sans Condensed', sans-serif;
   margin: 0;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -80,6 +95,7 @@ nav ul li:nth-of-type(3) a:hover {
   background-color: maroon;
 }
 
+
 /* Formatting for the banner */
 .banner { 
   grid-area: banner; 
@@ -87,6 +103,7 @@ nav ul li:nth-of-type(3) a:hover {
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
 }
+
 .bannerGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,11 +112,13 @@ nav ul li:nth-of-type(3) a:hover {
   grid-template-areas:
     "phone1 phone2";
 }
+
 .phone1 { 
   grid-area: phone1; 
   max-width: 300px;
   margin: 20px 80px 10px auto;
 }
+
 .phone2 { 
   grid-area: phone2; 
   max-width: 300px;
@@ -121,6 +140,23 @@ nav ul li:nth-of-type(3) a:hover {
   display: inline;
 }
 
+@media only screen and (max-width: 900px) {
+  .bannerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "phone1"
+      "phone2"
+  }
+  .banner, .phone1, .phone2 {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+
 /* Formatting for the index text boxes */
 .box1 { 
   grid-area: box1; 
@@ -138,6 +174,7 @@ nav ul li:nth-of-type(3) a:hover {
   width: 420px;
   height: auto;
 }
+
 
 .box2 { 
   grid-area: box2; 
@@ -196,15 +233,21 @@ nav ul li:nth-of-type(3) a:hover {
   width: 440px;
 }
 
+@media only screen and (max-width: 900px) {
+  .box1, .box2, .box3 {
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
 
 
 /* Formatting for the "get involved" page */
-
 .getInvolved {
   max-width: 900px;
   margin: auto;
 }
-
 .form {
   background-color: lightgray;
   max-width: 800px;
@@ -213,6 +256,9 @@ nav ul li:nth-of-type(3) a:hover {
 }
 .form p {
   padding: 0px 10px;
+}
+.banner img {
+  max-width: 100%;
 }
 
 
@@ -240,7 +286,6 @@ footer {
   grid-template-areas:
     "footer1 footer2 footer3"
 }
-
 footer button {
   background-color: rgb(91, 6, 25); /* Green */
   border: none;
@@ -267,3 +312,35 @@ footer a img {
 .footer1 { grid-area: footer1; }
 .footer2 { grid-area: footer2; }
 .footer3 { grid-area: footer3; }
+.footerMobile {
+  grid-area: footerMobile;
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer_Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0px;
+    grid-template-areas:
+      "footerMobile"
+  }
+  .footer1 { 
+    grid-area: footer1;
+    display: none;
+  }
+  .footer2 { 
+    grid-area: footer2; 
+    display: none;
+  }
+  .footer3 { 
+    grid-area: footer3;
+    display: none; 
+  }
+  .footerMobile {
+    grid-area: footerMobile;
+    margin: 20px;
+    display: block;
+  }
+}
