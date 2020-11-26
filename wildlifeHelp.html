@@ -6,6 +6,7 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/284110806b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -43,21 +44,36 @@
       <br>
     </div>
     <div class= "wildlifeHelp">
-      <h2>What to do if you find an injured animal</h2>
-      <img src="rescuedbird.jpg" alt="Rescued Bird image by Paula Bosch" style="float:right">
-      <p><em>Note: In the ACT, it is illegal to hold a wild native animal for more than 48 hours unless your are a registered carer or part of a licenced group.</em><br>
-      If possible, gently place the animal in a box with a towel or cloth and keep it warm and quiet while you wait for help to arrive.<br>
-      If you are unable to contain the animal, stay nearby and call our hotline on 0432 300 033 to recieve directions. Do not put yourself in danger.<br>
-      Seriously injured animals should be taken direclty to a vet for treatment.<br>
-      Flying foxes should <strong>not</strong> be handled as due to the potentially fatal viruses they carry. Please leave their rescue to trained carers.</p>
-      <h2>Avoiding animal stress</h2>
-      <p>When rescuing or containing wild animals, it is important to try keep their stress levels to a minimum. High stresses can worsen an already injured animals condition, and they may even die from this cause alone<br>
-      Injured animals should be kept in a safe, quiet place, away from human noises, smells, and pets. The temperature should be warm, but not hot.</p>
-      <h2>More tips</h2>
-      <ul>
-        <li>If you find a dead female possum, glider, kangaroo, wombat, or wallaby, check their pouch for a joey. Joeys can survive in their mothers pouch for several days after her death, even after a collision with a car.</li>
-        <li>Orphan joeys should be wrapped up and kept warm. Do not feed them milk or formula and contact a wildlife carer.</li>
-      </ul>>
+      <div>
+        <h2>What to do if you find an injured animal</h2>
+        <button id="help1Button" onclick="javascript:showHelp1();">^</button>
+      </div>
+      <div class = "help1" id= "help1" style="display:block">
+        <img src="rescuedbird.jpg" alt="Rescued Bird image by Paula Bosch" align="right">
+        <p><em>Note: In the ACT, it is illegal to hold a wild native animal for more than 48 hours unless your are a registered carer or part of a licenced group.</em><br>
+        If possible, gently place the animal in a box with a towel or cloth and keep it warm and quiet while you wait for help to arrive.<br>
+        If you are unable to contain the animal, stay nearby and call our hotline on 0432 300 033 to recieve directions. Do not put yourself in danger.<br>
+        Seriously injured animals should be taken directly to a vet for treatment.<br>
+        Flying foxes should <strong>not</strong> be handled due to the potentially fatal viruses they carry. Please leave their rescue to trained carers.</p>
+      </div>
+      <div>
+        <h2>Avoiding animal stress</h2>
+        <button id="help2Button" onclick="javascript:showHelp2();">v</button>
+      </div>
+      <div id= "help2" style="display:none">
+        <p>When rescuing or containing wild animals, it is important to try keep their stress levels to a minimum. High stresses can worsen an already injured animals condition, and they may even die from this cause alone.<br>
+        Injured animals should be kept in a safe, quiet place, away from human noises, smells, and pets. The temperature should be warm, but not hot.</p>
+      </div>
+      <div>
+        <h2>More tips</h2>
+        <button id="help3Button" onclick="javascript:showHelp3();">v</button>
+      </div>
+      <div id= "help3" style="display:none">
+        <ul>
+          <li>If you find a dead female possum, glider, kangaroo, wombat, or wallaby, check their pouch for a joey. Joeys can survive in their mothers pouch for several days after her death, even after a collision with a car.</li>
+          <li>Orphan joeys should be wrapped up and kept warm. Do not feed them milk or formula and contact a wildlife carer.</li>
+        </ul>
+      </div>
     </div>
   </body>
   <footer>

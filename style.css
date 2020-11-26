@@ -279,8 +279,34 @@ nav ul li:nth-of-type(3) a:hover {
 {
   max-width: 900px;
   margin: auto;
+  margin-top: 10px;
+  margin-bottom:10px;
 }
-
+.wildlifeHelp img {
+  margin: 10px;
+  height: 200px;
+}
+.wildlifeHelp #help1 {
+  min-height: 220px;
+}
+.wildlifeHelp div:nth-child(3), .wildlifeHelp div:nth-child(4){
+  background-color: lightgray;
+}
+.wildlifeHelp p{
+  margin:0px;
+  padding: 10px;
+}
+.wildlifeHelp div:nth-child(odd) {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.wildlifeHelp h2 {
+  margin: 0px;
+  display: inline;
+}
+.wildlifeHelp button {
+  float: right;
+}
 
 
 /* Formatting for the footer */

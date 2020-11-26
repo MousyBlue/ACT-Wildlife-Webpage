@@ -1,10 +1,8 @@
 function otherTicked() {
-  // Get the checkbox
   var checkBox = document.getElementById("other");
-  // Get the output text
+
   var text = document.getElementById("otherTextBox");
 
-  // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
     text.style.display = "block";
   } else {
@@ -31,5 +29,38 @@ function contactTicked() {
   else {
     emailTextBox.style.display = "none";
     phoneBox.style.display = "none";
+  }
+}
+
+function showHelp1() {
+  var section = document.getElementById("help1");
+  if (section.style.display === "none") {
+    section.style.display = "block";
+    document.getElementById("help1Button").innerHTML = "^";
+  } else {
+    section.style.display = "none";
+    document.getElementById("help1Button").innerHTML = "v";
+  }
+}
+
+function showHelp2() {
+  var section = document.getElementById("help2");
+  if (section.style.display === "none") {
+    section.style.display = "block";
+    document.getElementById("help2Button").innerHTML = "^";
+  } else {
+    section.style.display = "none";
+    document.getElementById("help2Button").innerHTML = "v";
+  }
+}
+
+function showHelp3() {
+  var section = document.getElementById("help3");
+  if (section.style.display === "none") {
+    section.style.display = "block";
+    document.getElementById("help3Button").innerHTML = "^";
+  } else {
+    section.style.display = "none";
+    document.getElementById("help3Button").innerHTML = "v";
   }
 }
