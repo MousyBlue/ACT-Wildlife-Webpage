@@ -260,6 +260,18 @@ nav ul li:nth-of-type(3) a:hover {
 .banner img {
   max-width: 100%;
 }
+.form div {
+  margin: 0px;
+}
+.form table {
+  table-layout: fixed;
+}
+.form em {
+  padding-left: 10px;
+  font-size: 10px;
+}
+/* Making elements appear when checked */
+
 
 
 /* Formatting for "wildlife help" page */

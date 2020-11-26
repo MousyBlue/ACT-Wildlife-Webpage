@@ -6,6 +6,7 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/284110806b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -39,32 +40,88 @@
           <h4>Name</h4>
             <input type="text" id="name" name="name" style="width:90%; height:30px; display:block; margin:auto;">
           <h4>Preferred Contact</h4>
-            <input type="radio" id="email" name="contact">
-            <label for="email">Email</label>
-            <input type="radio" id="phone" name="contact">
-            <label for="phone">Phone</label>
+            <table style="width:90%;margin:auto;">
+              <tr>
+                <td>
+                  <input type="radio" id="email" onclick="javascript:contactTicked();" name="contact">
+                  <label for="email">Email</label>
+                </td>
+                <td>
+                  <input type="radio" onclick="javascript:contactTicked();" id="phone" name="contact">
+                  <label for="phone">Phone</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="emailTextBox" style="display:none;">
+                    <input type="email" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;">
+                  </div>
+                </td>
+                <td>
+                  <div id="phoneBox" style="display:none;">
+                    <input type="tel" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;" pattern="[0-9]{4} [0-9]{3} [0-9]{3}">
+                    <em>Format: 1234 567 890</em>
+                  </div>
+                </td>
+              </tr>
+            </table>
           <h4>Areas of Interest</h4>
-            <input type="checkbox" id="interest1" name="interest1">
-            <label for="interest1">Fundraising</label>
-            <input type="checkbox" id="interest2" name="interest2">
-            <label for="interest2">Animal Rescue</label><br>
-            <input type="checkbox" id="interest3" name="interest3">
-            <label for="interest3">Animal Handling</label>
-            <input type="checkbox" id="interest4" name="interest4">
-            <label for="interest4">Fostering</label><br>
-            <input type="checkbox" id="interest5" name="interest5">
-            <label for="interest5">Animal Transport</label>
-            <input type="checkbox" id="interest6" name="interest6">
-            <label for="interest6">Education</label><br>
-            <input type="checkbox" id="interest7" name="interest7">
-            <label for="interest7">Land Care</label>
-            <input type="checkbox" id="other" name="other">
-            <label for="other">Other</label><br>
+            <table style="width:90%;margin:auto;">
+              <tr>
+                <td>
+                  <input type="checkbox" id="interest1" name="interest1">
+                  <label for="interest1">Fundraising</label>
+                </td>
+                <td>
+                  <input type="checkbox" id="interest2" name="interest2">
+                  <label for="interest2">Animal Rescue</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="interest3" name="interest3">
+                  <label for="interest3">Animal Handling</label>
+                </td>
+                <td>
+                  <input type="checkbox" id="interest4" name="interest4">
+                  <label for="interest4">Fostering</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="interest5" name="interest5">
+                  <label for="interest5">Animal Transport</label>
+                </td>
+                <td>
+                  <input type="checkbox" id="interest6" name="interest6">
+                  <label for="interest6">Education</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="interest7" name="interest7">
+                  <label for="interest7">Land Care</label>
+                </td>
+                <td>
+                  <input type="checkbox" onclick="javascript:otherTicked();" id="other" name="other">
+                  <label for="other">Other</label>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <div id="otherTextBox" style="display:none;">
+                    <input type="text" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;"><br>
+                    <em>Please type any additional interests here</em>
+                  </div>
+                </td>
+              </tr>
+            </table>
           <h4>Your experience</h4>
             <p>Do you have any experience working with ACT Wildlife or other similar organisations in the past? This will help us match you to a task best suited to your skills.</p>
            <textarea name="exp" style="width:90%; height:100px; margin:auto; display:block;"></textarea>
 
-          <p style="text-align:center;"><em>Thank you for your support of ACT Wildlife</em><br><br>
+          <p style="text-align:center;"><em style="font-size:14px;">Thank you for your support of ACT Wildlife</em><br><br>
           Click the "SIGN UP" button to submit your form.</p>
             <input type="submit" value="Sign Up" style="margin:auto; display:block;">
         </form>
