@@ -14,11 +14,14 @@
   </head>
   <body>
     <nav class="nav">
+      <!-- Each link is an element on the list -->
       <ul>
+        <!-- The logo and website name are the only elements on the left, everything else is orientated right -->
         <li style="float:left"><a href="index.html">
           <img src="echidna.jpg" alt="Echidna Logo" style="width:40px;height:40px;">
         </a></li>
         <li style="float:left"><a href="index.html">ACT WILDLIFE</a></li>
+        <!-- Must be listed backwards because the first written will be the right most due to floating -->
         <li style="background-color:rgb(91,6,25);"><a style="color:white" href="donate.html">SUPPORT US</a></li>
         <li><a href="kids.html">KIDS</a></li>
         <li><a href="gallery.html">GALLERY</a></li>
@@ -30,12 +33,17 @@
         <li><a href="index.html">HOME</a></li>
       </ul>
     </nav>
+    <!-- This nav is only shown when the screen is narrow -->
     <nav class="mobileNav">
+      <!-- This section of the nav is permanent and cant be collapsed -->
       <div id = "mobileHeader">
         <img src="echidna.jpg" alt="Echidna Logo" style="width:100px;height:100px;">
+        <!-- When this button is clicked, it triggers a JS function that makes the rest of the menu appear or disappear -->
         <button id="menuButton" onclick="javascript:showMenu();">ACT WILDLIFE</button>
       </div>
+      <!-- This section of the nav is hidden by default, but can be made to appear through clicking the above button -->
       <div id = "mobileContent" style="display:none">
+        <!-- The links are styled to be block elements, so they are on top of each other -->
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
         <a href="wildlifeHelp.html">WILDLIFE HELP</a>
@@ -44,9 +52,11 @@
         <a href="contact.html">CONTACT</a>
         <a href="gallery.html">GALLERY</a>
         <a href="kids.html">KIDS</a>
+        <!-- The support button has a different color to attract a=more attention -->
         <a href="donate.html"style="color:white;background-color:rgb(91,6,25);">SUPPORT US</a>
       </div>
     </nav>
+    <!-- Wildlife help banner, same as index page -->
     <div class="banner">
       <br>
       <h2>FOR 24hr WILDLIFE ASSISTANCE:</h2>
@@ -65,31 +75,42 @@
       </div>
       <br>
     </div>
+    <!-- Main content -->
     <div class= "wildlifeHelp">
+      <!-- Heading section -->
       <div>
         <h2>What to do if you find an injured animal</h2>
+        <!-- Button hides/shows the div below on click -->
         <button id="help1Button" onclick="javascript:showHelp1();">^</button>
       </div>
+      <!-- This div can be hidden by the button above -->
+      <!-- It gives information about what to do when you find an injured animal -->
       <div class = "help1" id= "help1" style="display:block">
+        <!-- This image is aligned to the right of the text -->
         <img src="rescuedbird.jpg" alt="Rescued Bird image by Paula Bosch" align="right">
-        <p><em>Note: In the ACT, it is illegal to hold a wild native animal for more than 48 hours unless your are a registered carer or part of a licenced group.</em><br>
+        <!-- Image reference: ACT Wildlife. (2020). Home. Retrieved from http://actwildlife.net/index.html -->
+        <p><em>Note: In the ACT, it is illegal to hold a wild native animal for more than 48 hours unless you are a registered carer or part of a licenced group.</em><br>
         If possible, gently place the animal in a box with a towel or cloth and keep it warm and quiet while you wait for help to arrive.<br>
         If you are unable to contain the animal, stay nearby and call our hotline on 0432 300 033 to recieve directions. Do not put yourself in danger.<br>
         Seriously injured animals should be taken directly to a vet for treatment.<br>
         Flying foxes should <strong>not</strong> be handled due to the potentially fatal viruses they carry. Please leave their rescue to trained carers.</p>
       </div>
+      <!-- Header section with button to hide/show div below -->
       <div>
         <h2>Avoiding animal stress</h2>
         <button id="help2Button" onclick="javascript:showHelp2();">v</button>
       </div>
+      <!-- This section is hidden by default, and appear by pressing the above buttton -->
       <div id= "help2" style="display:none">
         <p>When rescuing or containing wild animals, it is important to try keep their stress levels to a minimum. High stresses can worsen an already injured animals condition, and they may even die from this cause alone.<br>
         Injured animals should be kept in a safe, quiet place, away from human noises, smells, and pets. The temperature should be warm, but not hot.</p>
       </div>
+       <!-- Header section with button to hide/show div below -->
       <div>
         <h2>More tips</h2>
         <button id="help3Button" onclick="javascript:showHelp3();">v</button>
       </div>
+      <!-- This section is hidden by default, and appear by pressing the above buttton -->
       <div id= "help3" style="display:none">
         <ul>
           <li>If you find a dead female possum, glider, kangaroo, wombat, or wallaby, check their pouch for a joey. Joeys can survive in their mothers pouch for several days after her death, even after a collision with a car.</li>
@@ -98,19 +119,27 @@
       </div>
     </div>
   </body>
+    <!-- This is the footer -->
   <footer>
+    <!-- This is a three column footer that is only shown when the window is large enough -->
     <div class="footer_Grid">
+      <!-- Left column of footer -->
       <div class="footer1">
         <p><em>Our Sponsor</em></p>
+        <!-- Here, the image acts as a button - clicking it will open a new tab to the sponsor company page -->
         <a href="https://www.apisgroup.com.au/" target="_blank">
-          <img src="apislogo.jpg" alt="Logo of APIS" style="width:auto;height:40px;">
+          <img src="apislogo.jpg" alt="Logo of APIS">
         </a>
       </div>
+      <!-- Middle column of the footer -->
       <div class="footer2">
         <p><em>Thank you for supporting ACT Wildlife</em></p>
-        <button onclick="document.location='supportUs.html'">DONATE</button>
+        <!-- This button will direct the user to a money donate page -->
+        <button onclick="document.location='donate.html'">DONATE</button>
       </div>
+      <!-- Right column of footer -->
       <div class="footer3">
+        <!-- Social media links as icons -->
         <p><em>Find Us on Social Media</em></p>
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>
@@ -125,6 +154,8 @@
           <i class="fab fa-twitter"></i>
         </a>
       </div>
+      <!-- This footer is only shown when the window is narrow -->
+      <!-- It only contains the social media links to be nice and concice -->
       <div class="footerMobile">
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>

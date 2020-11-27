@@ -6,37 +6,51 @@
     <meta name="keywords" content="ACT, Wildlife, Charity, Nature, Rescue, Animals">
     <meta name="author" content="Kaela McGuire">
     <meta name="viewport" content="width=device-width">
+
     <title>ACT Wildlife</title>
+
     <link rel="shortcut icon" type="image/jpg" href="echidna.jpg"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
+
     <script src="https://kit.fontawesome.com/284110806b.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </head>
   <body>
+  <!-- The index grid determines general layout of the index page -->
   <div class="index_Grid">
+    <!-- This nav is shown only when the screen is large -->
     <nav class="nav">
+      <!-- Each link is an element on the list -->
       <ul>
+        <!-- The logo and website name are the only elements on the left, everything else is orientated right -->
         <li style="float:left"><a href="index.html">
           <img src="echidna.jpg" alt="Echidna Logo" style="width:40px;height:40px;">
+          <!-- Image reference: ACT Wildlife. (2020). Home. Retrieved from http://actwildlife.net/index.html -->
         </a></li>
         <li style="float:left"><a href="index.html">ACT WILDLIFE</a></li>
+        <!-- Must be listed backwards because the first written will be the right most due to floating -->
         <li style="background-color:rgb(91,6,25);"><a style="color:white" href="donate.html">SUPPORT US</a></li>
         <li><a href="kids.html">KIDS</a></li>
-        <li><a href="galler.html">GALLERY</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
         <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="publication.html">PUBLICATIONS</a></li>
+        <li><a href="publications.html">PUBLICATIONS</a></li>
         <li><a href="getInvolved.html">GET INVOLVED</a></li>
         <li><a href="wildlifeHelp.html">WILDLIFE HELP</a></li>
         <li><a href="about.html">ABOUT US</a></li>
         <li><a href="index.html">HOME</a></li>
       </ul>
     </nav>
+    <!-- This nav is only shown when the screen is narrow -->
     <nav class="mobileNav">
+      <!-- This section of the nav is permanent and cant be collapsed -->
       <div id = "mobileHeader">
         <img src="echidna.jpg" alt="Echidna Logo" style="width:100px;height:100px;">
+        <!-- When this button is clicked, it triggers a JS function that makes the rest of the menu appear or disappear -->
         <button id="menuButton" onclick="javascript:showMenu();">ACT WILDLIFE</button>
       </div>
+      <!-- This section of the nav is hidden by default, but can be made to appear through clicking the above button -->
       <div id = "mobileContent" style="display:none">
+        <!-- The links are styled to be block elements, so they are on top of each other -->
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
         <a href="wildlifeHelp.html">WILDLIFE HELP</a>
@@ -45,32 +59,41 @@
         <a href="contact.html">CONTACT</a>
         <a href="gallery.html">GALLERY</a>
         <a href="kids.html">KIDS</a>
+        <!-- The support button has a different color to attract a=more attention -->
         <a href="donate.html"style="color:white;background-color:rgb(91,6,25);">SUPPORT US</a>
       </div>
     </nav>
+    <!-- This is the html for the banner -->
     <div class="banner">
       <h2>FOR 24hr WILDLIFE ASSISTANCE:</h2>
       <br>
+      <!-- This grid contains the contact information for both services -->
       <div class="bannerGrid">
         <span class="phone1">
+          <!-- Hierachy of information, size descends -->
           <h3>ACT WILDLIFE HOTLINE</h3>
           <h4>0432 300 033</h4>
           <p><i>For all sick, injured, and orphaned wildlife in the nation's capital.</i></p>
         </span>
+        <!-- Formatting remains consistent for both grid boxes -->
         <span class="phone2">
           <h3>ACCESS CANBERRA</h3>
           <h4>13 22 81</h4>
           <p><i>For sick or injured kangaroos, snakes, and adult wombats</i></p>
         </span>
       </div>
+      <!-- A little breathing room because padding is a n n o y i n g -->
       <br>
     </div>
+    <!-- This is the top left box -->
     <div class="box1">
+      <!-- The figure is style to fit into the box -->
       <figure>
         <img src="babywombat.jpg" alt="A snuggly baby wombat">
         <figcaption><em>Photo by Lindy Butcher</em></figcaption>
       </figure>
     </div>
+    <!-- This is the rop right box -->
     <div class="box2">
       <h2>Upcoming Events</h2><hr><br>
       <!-- A table to neatly organise the Events -->
@@ -78,9 +101,11 @@
         <tr>
           <td><strong>Saturday, November 14</strong></td>
           <td><strong>Orientation Day</strong></td>
+          <!-- The join button spans 2 rows -->
           <td rowspan="2"><button onclick="">JOIN</button></td>
         </tr>
         <tr>
+          <!-- The description spans two columns -->
           <td colspan="2"><em>Come and get to know ACT wildlife and its volunteers!</em></td>
         </tr>
         <tr>
@@ -93,11 +118,15 @@
         </tr>
       </table>
       <br>
+      <!-- A small notice -->
       <p style="text-align:center;"><em>All training sessions are currently being conducted online due to the COVID-19 pandemic.</em></p>
       <p style="text-align:center;">More dates coming soon!</p>
     </div>
+    <!-- This is the bottom left box -->
     <div class="box3">
+      <!-- Heirachy of headings, biggest is h2 because for some reason H1 makes me nervous -->
       <h2>Wildlife Tips</h2>
+      <!-- A horizontal line to break up the heading and the content -->
       <hr>
       <h3>TIP: KEEP CATS INDOORS</h3>
       <p>Wandering cats can be detrimental to native wildlife. Keep your furry friend inside to protect your  feathered ones.</p>
@@ -108,24 +137,33 @@
       <h3>TIP: ONLY USE FINE BIRD NETTING</h3>
       <p>Bird nettings with large gaps can easily ensnare birds or flying foxes. Nettings should have holes no larger than your pinky finger, and should be stretched away from branches.</p>
     </div>
+    <!-- This is the bottom right box. It has a background image added in styling, but no content -->
     <div class="box4">
     </div>
   </div>
-  <script src="script.js"></script>
   </body>
-    <footer>
+  <!-- This is the footer -->
+  <footer>
+    <!-- This is a three column footer that is only shown when the window is large enough -->
     <div class="footer_Grid">
+      <!-- Left column of footer -->
       <div class="footer1">
         <p><em>Our Sponsor</em></p>
+        <!-- Here, the image acts as a button - clicking it will open a new tab to the sponsor company page -->
         <a href="https://www.apisgroup.com.au/" target="_blank">
           <img src="apislogo.jpg" alt="Logo of APIS">
+          <!-- Image reference: <!-- Image reference: Apis Group. (2020). Apis. Retrieved from https://www.apisgroup.com.au/ -->
         </a>
       </div>
+      <!-- Middle column of the footer -->
       <div class="footer2">
         <p><em>Thank you for supporting ACT Wildlife</em></p>
-        <button onclick="document.location='supportUs.html'">DONATE</button>
+        <!-- This button will direct the user to a money donate page -->
+        <button onclick="document.location='donate.html'">DONATE</button>
       </div>
+      <!-- Right column of footer -->
       <div class="footer3">
+        <!-- Social media links as icons -->
         <p><em>Find Us on Social Media</em></p>
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>
@@ -140,6 +178,8 @@
           <i class="fab fa-twitter"></i>
         </a>
       </div>
+      <!-- This footer is only shown when the window is narrow -->
+      <!-- It only contains the social media links to be nice and concice -->
       <div class="footerMobile">
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>

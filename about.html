@@ -14,11 +14,14 @@
   </head>
   <body>
         <nav class="nav">
+      <!-- Each link is an element on the list -->
       <ul>
+        <!-- The logo and website name are the only elements on the left, everything else is orientated right -->
         <li style="float:left"><a href="index.html">
           <img src="echidna.jpg" alt="Echidna Logo" style="width:40px;height:40px;">
         </a></li>
         <li style="float:left"><a href="index.html">ACT WILDLIFE</a></li>
+        <!-- Must be listed backwards because the first written will be the right most due to floating -->
         <li style="background-color:rgb(91,6,25);"><a style="color:white" href="donate.html">SUPPORT US</a></li>
         <li><a href="kids.html">KIDS</a></li>
         <li><a href="gallery.html">GALLERY</a></li>
@@ -30,12 +33,17 @@
         <li><a href="index.html">HOME</a></li>
       </ul>
     </nav>
+    <!-- This nav is only shown when the screen is narrow -->
     <nav class="mobileNav">
+      <!-- This section of the nav is permanent and cant be collapsed -->
       <div id = "mobileHeader">
         <img src="echidna.jpg" alt="Echidna Logo" style="width:100px;height:100px;">
+        <!-- When this button is clicked, it triggers a JS function that makes the rest of the menu appear or disappear -->
         <button id="menuButton" onclick="javascript:showMenu();">ACT WILDLIFE</button>
       </div>
+      <!-- This section of the nav is hidden by default, but can be made to appear through clicking the above button -->
       <div id = "mobileContent" style="display:none">
+        <!-- The links are styled to be block elements, so they are on top of each other -->
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
         <a href="wildlifeHelp.html">WILDLIFE HELP</a>
@@ -44,48 +52,69 @@
         <a href="contact.html">CONTACT</a>
         <a href="gallery.html">GALLERY</a>
         <a href="kids.html">KIDS</a>
+        <!-- The support button has a different color to attract a=more attention -->
         <a href="donate.html"style="color:white;background-color:rgb(91,6,25);">SUPPORT US</a>
       </div>
     </nav>
     <div class="banner">
+      <!-- image scales with page size -->
       <img src="echidnas.jpg" alt="A trio of Echidnas, by Peter Hammond" style="width:auto">
+      <!-- Image reference: Hammond, P. A trio of Echidnas [Image]. Retrieved from https://actwildlife.net/ -->
     </div>
+    <!-- The main content of the page -->
     <div class="about">
+      <!-- This box is on the left for web versions and takes up 2 rows. In mobile versions, its in the middle.-->
       <div class="aboutAside">
         <figure>
           <img src="yarra.jpg" alt="Yarra the Wombat">
           <figcaption><em>Yarra the rescued wombat</em></figcaption>
+          <!-- Image Source Jacobs, G. (2019). ACT Wildlife’s help a lifeline for little Yarra and other injured animals [Blog]. Retrieved from https://the-riotact.com/act-wildlifes-help-a-lifeline-for-little-yarra-and-other-injured-animals/287357" -->
         </figure>
       </div>
+      <!-- This is the top right box. It contains information about the charity and its aims -->
       <div class="about1">
         <h2>About Us</h2>
+        <!-- The motto of ACT Wildlife -->
         <p style="text-align:center"><em>Rescue, Rehabilitate, Release</em></p>
+        <!-- Info about them -->
         <p>ACT Wildlife is the national capitals only charity organisation dedicated to helping our native wildlife thrive, through good and bad times. Our dedicated team of volunteers rescue and care for injured or orphaned animals until they are well enough to be released into the wild.<br><br>
         We also provide educational programs for members of public, teaching them how better share their city with its native wildlife, premoting a more harmonious existence. In addition to this are our proffessional training courses, which equip members with the skills to care for animals at the highest standard.
         </p>
       </div>
+      <!-- This is the bottom left box. It provides information about the current project ACT wildlife is undertaking. -->
       <div class="about2">
+        <!-- Heading -->
         <h2>Our Projects</h2>
+        <!-- Project Name -->
         <p style="text-align:center"><em>Wombat Mange Project</em></p>
+        <!-- About the project -->
         <p>Currently, ACT Wildlife is teaming up with members of the public to help reduce instances of mange in local wombats.<br><br>
         Mange is a very painful and debilitating skin condition often seen in wombats that is caused by parasitic mites. These mites bury into the wombats skin and can cause itching, hair loss, wounds, and infections that can lead to death. Thankfully, these mites can be killed with medicinal treatment, which needs to be applied to the skin for regularly over a 16 week duration.<br><br>
         ACT Wildlife has secured funding for these treatments and can provide them free to any member of the public willing and able to help our wombats out.</p>
       </div>
     </div>
   </body>
+  <!-- This is the footer -->
   <footer>
+    <!-- This is a three column footer that is only shown when the window is large enough -->
     <div class="footer_Grid">
+      <!-- Left column of footer -->
       <div class="footer1">
         <p><em>Our Sponsor</em></p>
+        <!-- Here, the image acts as a button - clicking it will open a new tab to the sponsor company page -->
         <a href="https://www.apisgroup.com.au/" target="_blank">
-          <img src="apislogo.jpg" alt="Logo of APIS" style="width:auto;height:40px;">
+          <img src="apislogo.jpg" alt="Logo of APIS">
         </a>
       </div>
+      <!-- Middle column of the footer -->
       <div class="footer2">
         <p><em>Thank you for supporting ACT Wildlife</em></p>
-        <button onclick="document.location='supportUs.html'">DONATE</button>
+        <!-- This button will direct the user to a money donate page -->
+        <button onclick="document.location='donate.html'">DONATE</button>
       </div>
+      <!-- Right column of footer -->
       <div class="footer3">
+        <!-- Social media links as icons -->
         <p><em>Find Us on Social Media</em></p>
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>
@@ -100,6 +129,8 @@
           <i class="fab fa-twitter"></i>
         </a>
       </div>
+      <!-- This footer is only shown when the window is narrow -->
+      <!-- It only contains the social media links to be nice and concice -->
       <div class="footerMobile">
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>
@@ -115,5 +146,5 @@
         </a>
       </div>
     </div>
-  </footer>
+  </footer> 
 </html>

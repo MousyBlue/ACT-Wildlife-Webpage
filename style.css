@@ -1,6 +1,6 @@
+/* ------------------------- CSS Styling -----------------------------*/
 
-/* General formatting */
-
+/* ---------------------- General formatting -------------------------*/
 * {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -27,34 +27,7 @@ hr {
   height:3px;
 }
 
-/* Grid layout developed with https://grid.layoutit.com/ */
-.index_Grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  gap: 0px 0px;
-  grid-template-areas:
-    "nav nav"
-    "banner banner"
-    "box1 box2"
-    "box3 box4"
-}
-@media only screen and (max-width: 900px) {
-  .index_Grid {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    gap: 0px;
-    grid-template-areas:
-      "mobileNav"
-      "banner"
-      "box1"
-      "box2"
-      "box3"
-  }
-}
-
-/* Formatting for the navigation bar */
+/* ---------------Formatting for the navigation bar ----------------- */
 .nav { 
   grid-area: nav; 
   font-family: 'Open Sans Condensed', sans-serif;
@@ -62,6 +35,7 @@ hr {
   height: auto;
 }
 
+/* The nav bar is basically a list of links */
 .nav ul {
   list-style-type: none;
   margin: 0;
@@ -69,11 +43,9 @@ hr {
   overflow: hidden;
   background-color: white;
 }
-
 .nav li {
   float: right;
 }
-
 .nav li a {
   display: block;
   color: black;
@@ -82,23 +54,25 @@ hr {
   text-decoration: none;
   font-size: 16px;
 }
-
+/* This is the small logo in the top left */
 .nav ul li:first-of-type a {
   padding: 0px;
 }
 
-/* Change the link color to light grey on hover */
+/* Link color from white to light grey on hover */
 .nav li a:hover {
   background-color: #EEE;
 }
-/* Except for the support us button */
+/* Except for the support us button, because its red */
 .nav ul li:nth-of-type(3) a:hover {
   background-color: maroon;
 }
+/* Also dont want the "logo" links to change colour */
 .nav ul li:first-of-type a:hover, .nav ul li:nth-of-type(2) a:hover {
   background-color: white;
 }
 
+/* The mobile nav is an entirely different section so is formatted slightly differently. */
 .mobileNav {
   grid-area: mobileNav;
   margin: 0px;
@@ -128,7 +102,6 @@ hr {
   border: 0px;
   margin: auto;
 }
-/* Change the link color to light grey on hover */
 .mobileNav a:hover {
   background-color: #EEE;
 }
@@ -136,6 +109,7 @@ hr {
   cursor: pointer;
 }
 
+/* Media queries to hide the normal nav and show the mobile nav on narrow screens, and vice versa */
 @media only screen and (max-width: 900px) {
   .nav {
     display: none;
@@ -153,7 +127,7 @@ hr {
   }
 }
 
-/* Formatting for the banner */
+/* --------------------- Formatting for the banner --------------------*/
 .banner { 
   grid-area: banner; 
   background-color: rgb(141,202,117);
@@ -163,7 +137,7 @@ hr {
   margin: 0px;
   height: auto;
 }
-
+/* Grid layouts developed with https://grid.layoutit.com/ */
 .bannerGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -172,17 +146,8 @@ hr {
   grid-template-areas:
     "phone1 phone2";
 }
-
-.phone1 { 
-  grid-area: phone1; 
-  max-width: 300px;
-  margin: 20px 80px 10px auto;
-}
-
-.phone2 { 
-  grid-area: phone2; 
-  max-width: 300px;
-  margin: 20px auto 10px 80px;
+.banner img {
+  max-width: 100%;
 }
 .banner h2 {
   color: white
@@ -200,6 +165,19 @@ hr {
   display: inline;
 }
 
+/* Formatting of the specific grid areas */
+.phone1 { 
+  grid-area: phone1; 
+  max-width: 300px;
+  margin: 20px 80px 10px auto;
+}
+.phone2 { 
+  grid-area: phone2; 
+  max-width: 300px;
+  margin: 20px auto 10px 80px;
+}
+
+/* Media query to chance the grid structure when the screen is narrow */
 @media only screen and (max-width: 900px) {
   .bannerGrid {
     display: grid;
@@ -217,7 +195,20 @@ hr {
 }
 
 
-/* Formatting for the index page */
+/* -------------- Formatting for the index page --------------------- */
+.index_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nav nav"
+    "banner banner"
+    "box1 box2"
+    "box3 box4"
+}
+
+/* Formatting associated with the first box */
 .box1 { 
   grid-area: box1; 
   background-color: rgb(235,235,235);
@@ -235,7 +226,7 @@ hr {
   height: auto;
 }
 
-
+/* Formatting associated with the second box */
 .box2 { 
   grid-area: box2; 
   background-color: rgb(235,235,235);
@@ -276,6 +267,7 @@ hr {
   opacity: 0.8;
 }
 
+/* Formatting associated with the third box */
 .box3 { 
   grid-area: box3; 
   background-color: rgb(235,235,235);
@@ -291,6 +283,8 @@ hr {
   margin-bottom: 3px;
   margin-left: 5px;
 }
+
+/* Formatting associated with the forth box */
 .box4 { 
   grid-area: box4;
   margin: 10px auto 20px 10px; 
@@ -301,7 +295,20 @@ hr {
   opacity: 0.4;
 }
 
+/* When the screen is less than 900px, change the layout to stack */
 @media only screen and (max-width: 900px) {
+  .index_Grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px;
+    grid-template-areas:
+      "mobileNav"
+      "banner"
+      "box1"
+      "box2"
+      "box3"
+  }
   .box1, .box2, .box3 {
     margin: auto;
     margin-bottom: 5px;
@@ -310,11 +317,13 @@ hr {
 }
 
 
-/* Formatting for the "get involved" page */
+/*----------------- Formatting for the "get involved" page -----------*/
 .getInvolved {
   max-width: 900px;
   margin: auto;
 }
+
+/* Formatting for the form */
 .form {
   background-color: #EEE;
   max-width: 800px;
@@ -323,9 +332,6 @@ hr {
 }
 .form p {
   padding: 0px 10px;
-}
-.banner img {
-  max-width: 100%;
 }
 .form div {
   margin: 0px;
@@ -340,7 +346,7 @@ hr {
 
 
 
-/* Formatting for "wildlife help" page */
+/*---------------- Formatting for "wildlife help" page ----------------*/
 .wildlifeHelp
 {
   max-width: 900px;
@@ -348,41 +354,47 @@ hr {
   margin-top: 10px;
   margin-bottom:10px;
 }
+
 .wildlifeHelp img {
   margin: 10px;
   height: 200px;
-}
-.wildlifeHelp #help1 {
-  min-height: 220px;
-}
-.wildlifeHelp div:nth-child(3), .wildlifeHelp div:nth-child(4){
-  background-color: #EEE;
 }
 .wildlifeHelp p{
   margin:0px;
   padding: 10px;
 }
-.wildlifeHelp div:nth-child(odd) {
-  margin-top: 10px;
-  padding: 5px 10px;
-}
 .wildlifeHelp h2 {
   margin: 0px;
   display: inline;
 }
+
 .wildlifeHelp button {
   float: right;
   border: none;
   background-color: white;
 }
-.wildlifeHelp div:nth-child(3) button {
-  background-color: #EEE;
-}
 .wildlifeHelp button:hover {
   cursor: pointer;
 }
 
-/* Formatting for the About page */
+/* The headings and content are in separate divs */
+.wildlifeHelp #help1 {
+  min-height: 220px;
+}
+/* Middle section is a different colour to help it stand out */
+.wildlifeHelp div:nth-child(3), .wildlifeHelp div:nth-child(4){
+  background-color: #EEE;
+}
+/* Odd divs are headings */
+.wildlifeHelp div:nth-child(odd) {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.wildlifeHelp div:nth-child(3) button {
+  background-color: #EEE;
+}
+
+/*------------------ Formatting for the About page -------------------*/
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -392,6 +404,14 @@ hr {
     "aboutAside about1"
     "aboutAside about2";
 }
+.about h2 {
+  text-align: center;
+}
+.about em {
+  text-align: center;
+}
+
+/* This section spans left side of the main page */
 .aboutAside { 
   grid-area: aboutAside;
   background-color: rgb(235,235,235);
@@ -409,6 +429,8 @@ hr {
   height: auto;
   margin: auto;
 }
+
+/* Top box */
 .about1 { 
   grid-area: about1; 
   background-color: rgb(235,235,235);
@@ -416,12 +438,8 @@ hr {
   width: 440px;
   padding: 0px 15px 5px 15px;
 }
-.about1 h2 {
-  text-align: center;
-}
-.about1 em {
-  text-align: center;
-}
+
+/* Bottom box */
 .about2 { 
   grid-area: about2; 
   background-color: rgb(235,235,235);
@@ -429,13 +447,8 @@ hr {
   width: 440px;
   padding: 0px 15px 5px 15px;
 }
-.about2 h2 {
-  text-align: center;
-}
-.about2 em {
-  text-align: center;
-}
 
+/* Rearrange the grid when the screen is narrow */
 @media only screen and (max-width: 900px) {
   .about {
     display: grid;
@@ -455,15 +468,12 @@ hr {
 }
 
 
-
-
-/* Formatting for the footer */
+/*--------------------- Formatting for the footer ---------------------*/
 footer { 
   grid-area: footer; 
   background-color: rgb(141, 202, 117);
   text-align: center
 }
-
 .footer_Grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -472,6 +482,16 @@ footer {
   grid-template-areas:
     "footer1 footer2 footer3"
 }
+footer i, footer a {
+  font-size: 26px;
+  text-decoration: none;
+  color: maroon;
+}
+footer a img {
+  height: 30px;
+  width: auto;
+}
+
 footer button {
   background-color: rgb(91, 6, 25); /* Green */
   border: none;
@@ -487,23 +507,17 @@ footer button:hover {
   background-color: maroon;
   cursor: pointer;
 }
-footer i, footer a {
-  font-size: 26px;
-  text-decoration: none;
-  color: maroon;
-}
-footer a img {
-  height: 30px;
-  width: auto;
-}
+
 .footer1 { grid-area: footer1; }
 .footer2 { grid-area: footer2; }
 .footer3 { grid-area: footer3; }
+
 .footerMobile {
   grid-area: footerMobile;
   display: none;
 }
 
+/* I only want "footerMobile" to be shown in mobile mode */
 @media only screen and (max-width: 900px) {
   .footer_Grid {
     display: grid;

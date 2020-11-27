@@ -14,11 +14,14 @@
   </head>
   <body>
     <nav class="nav">
+      <!-- Each link is an element on the list -->
       <ul>
+        <!-- The logo and website name are the only elements on the left, everything else is orientated right -->
         <li style="float:left"><a href="index.html">
           <img src="echidna.jpg" alt="Echidna Logo" style="width:40px;height:40px;">
         </a></li>
         <li style="float:left"><a href="index.html">ACT WILDLIFE</a></li>
+        <!-- Must be listed backwards because the first written will be the right most due to floating -->
         <li style="background-color:rgb(91,6,25);"><a style="color:white" href="donate.html">SUPPORT US</a></li>
         <li><a href="kids.html">KIDS</a></li>
         <li><a href="gallery.html">GALLERY</a></li>
@@ -30,12 +33,17 @@
         <li><a href="index.html">HOME</a></li>
       </ul>
     </nav>
+    <!-- This nav is only shown when the screen is narrow -->
     <nav class="mobileNav">
+      <!-- This section of the nav is permanent and cant be collapsed -->
       <div id = "mobileHeader">
         <img src="echidna.jpg" alt="Echidna Logo" style="width:100px;height:100px;">
+        <!-- When this button is clicked, it triggers a JS function that makes the rest of the menu appear or disappear -->
         <button id="menuButton" onclick="javascript:showMenu();">ACT WILDLIFE</button>
       </div>
+      <!-- This section of the nav is hidden by default, but can be made to appear through clicking the above button -->
       <div id = "mobileContent" style="display:none">
+        <!-- The links are styled to be block elements, so they are on top of each other -->
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT US</a>
         <a href="wildlifeHelp.html">WILDLIFE HELP</a>
@@ -44,26 +52,35 @@
         <a href="contact.html">CONTACT</a>
         <a href="gallery.html">GALLERY</a>
         <a href="kids.html">KIDS</a>
+        <!-- The support button has a different color to attract a=more attention -->
         <a href="donate.html"style="color:white;background-color:rgb(91,6,25);">SUPPORT US</a>
       </div>
     </nav>
+    <!-- Banner showing an image of a volunteer chillin with a wombat -->
     <div class="banner">
       <img src="getinvolvedbanner.jpg" alt="Volunteer with a wombat" style="width:auto">
+      <!-- Image reference: ACT Wildlife. (2020). Home. Retrieved from http://actwildlife.net/index.html -->
     </div>
+    <!-- This is the main content for the page -->
     <div class="getInvolved">
+      <!-- Small bit of info about how to sign up -->
       <h2>Volunteering with ACT Wildlife</h2>
       <p>Thank you for your interest in volunteering with ACT Wildlife. Volunteers are the heart of our charity and we are always looking for more caring individuals to help support the beautiful native wildlife of the ACT.<br>
       To sign up as a volunteer, simply fill out this form with your contact details and interests and one of our outreach members will be in touch shortly!</p>
-
+      <!-- Sign Up form -->
       <div class="form">
         <form>
+          <!-- Title -->
           <h3 style="text-align:center;"> Volunteer Sign Up Form</h3>
+          <!-- Headings explain what they need to write in the box -->
           <h4>Name</h4>
             <input type="text" id="name" name="name" style="width:90%; height:30px; display:block; margin:auto;">
           <h4>Preferred Contact</h4>
+            <!-- Table to distribute the radio boxes evenly in 2 columns-->
             <table style="width:90%;margin:auto;">
               <tr>
                 <td>
+                  <!-- Radio buttons activate extra text box if clicked -->
                   <input type="radio" id="email" onclick="javascript:contactTicked();" name="contact">
                   <label for="email">Email</label>
                 </td>
@@ -72,21 +89,26 @@
                   <label for="phone">Phone</label>
                 </td>
               </tr>
+              <!-- This half of the table is only displayed if one of the radios is clicked -->
               <tr>
                 <td>
+                  <!-- If the email box is clicked, this box will display -->
                   <div id="emailTextBox" style="display:none;">
                     <input type="email" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;">
                   </div>
                 </td>
                 <td>
+                  <!-- If the phone box is clicked, this box will display -->
                   <div id="phoneBox" style="display:none;">
                     <input type="tel" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;" pattern="[0-9]{4} [0-9]{3} [0-9]{3}">
+                    <!-- Format acceptable -->
                     <em>Format: 1234 567 890</em>
                   </div>
                 </td>
               </tr>
             </table>
           <h4>Areas of Interest</h4>
+            <!-- Table for interests to keep them in line -->
             <table style="width:90%;margin:auto;">
               <tr>
                 <td>
@@ -124,6 +146,7 @@
                   <label for="interest7">Land Care</label>
                 </td>
                 <td>
+                  <!-- IF this box is checked, extra text box shown for input -->
                   <input type="checkbox" onclick="javascript:otherTicked();" id="other" name="other">
                   <label for="other">Other</label>
                 </td>
@@ -131,8 +154,9 @@
               <tr>
                 <td></td>
                 <td>
+                  <!-- This only appears when Other checkbox is ticked -->
                   <div id="otherTextBox" style="display:none;">
-                    <input type="text" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;"><br>
+                    <input type="text" id="otherText" name="otherText" style="width:90%; height:30px; display:block; margin:0px;">
                     <em>Please type any additional interests here</em>
                   </div>
                 </td>
@@ -140,8 +164,10 @@
             </table>
           <h4>Your experience</h4>
             <p>Do you have any experience working with ACT Wildlife or other similar organisations in the past? This will help us match you to a task best suited to your skills.</p>
-           <textarea name="exp" style="width:90%; height:100px; margin:auto; display:block;"></textarea>
+            <!-- Large imput field to type in -->
+            <textarea name="exp" style="width:90%; height:100px; margin:auto; display:block;"></textarea>
 
+          <!-- Submit button with info -->
           <p style="text-align:center;"><em style="font-size:14px;">Thank you for your support of ACT Wildlife</em><br><br>
           Click the "SIGN UP" button to submit your form.</p>
             <input type="submit" value="Sign Up" style="margin:auto; display:block;">
@@ -151,19 +177,27 @@
       <br>
     </div>
   </body>
+    <!-- This is the footer -->
   <footer>
+    <!-- This is a three column footer that is only shown when the window is large enough -->
     <div class="footer_Grid">
+      <!-- Left column of footer -->
       <div class="footer1">
         <p><em>Our Sponsor</em></p>
+        <!-- Here, the image acts as a button - clicking it will open a new tab to the sponsor company page -->
         <a href="https://www.apisgroup.com.au/" target="_blank">
-          <img src="apislogo.jpg" alt="Logo of APIS" style="width:auto;height:40px;">
+          <img src="apislogo.jpg" alt="Logo of APIS">
         </a>
       </div>
+      <!-- Middle column of the footer -->
       <div class="footer2">
         <p><em>Thank you for supporting ACT Wildlife</em></p>
-        <button onclick="document.location='supportUs.html'">DONATE</button>
+        <!-- This button will direct the user to a money donate page -->
+        <button onclick="document.location='donate.html'">DONATE</button>
       </div>
+      <!-- Right column of footer -->
       <div class="footer3">
+        <!-- Social media links as icons -->
         <p><em>Find Us on Social Media</em></p>
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>
@@ -178,6 +212,8 @@
           <i class="fab fa-twitter"></i>
         </a>
       </div>
+      <!-- This footer is only shown when the window is narrow -->
+      <!-- It only contains the social media links to be nice and concice -->
       <div class="footerMobile">
         <a href="https://www.facebook.com/ACT.Wildlife/" target="_blank">
           <i class="fab fa-facebook-square"></i>
@@ -193,5 +229,5 @@
         </a>
       </div>
     </div>
-  </footer>
+  </footer> 
 </html>
